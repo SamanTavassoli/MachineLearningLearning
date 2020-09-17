@@ -7,6 +7,9 @@ import xdrlib
 
 style.use('ggplot')
 
+# just went through trying to remember what to do and adding it but it ended looking exactly like the original
+# as there is no real change I would make for now
+
 
 class K_Means:
     def __init__(self, k=2, tol=0.001, max_iter=300):
@@ -97,7 +100,6 @@ for i in range(len(X)):
         correct += 1
 
 print(correct / len(X))
-
 
 
 
