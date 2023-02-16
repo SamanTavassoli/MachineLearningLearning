@@ -5,7 +5,7 @@ from sklearn.datasets import make_blobs
 
 style.use('ggplot')
 
-X, y = make_blobs(n_samples=50, centers=8, n_features=2)
+X, y = make_blobs(n_samples=50, centers=4, n_features=2)
 
 # X = np.array([[1, 2],
 #               [1.5, 1.8],

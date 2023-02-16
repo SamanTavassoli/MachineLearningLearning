@@ -18,9 +18,12 @@ df = df[['employeecars', 'containers', 'trucks', 'tippers', 'finishedproducts']]
 print(df)
 forecast_col = 'finishedproducts'
 df.fillna(-9999, inplace=True)
+forecast_out = int(math.ceil(0.01 * len(df)))
+df['label'] = df[forecast_col].shift(-forecast_out) # added 14 Apr 2021 - not much change really, kind of bad data for this
+df.dropna(inplace=True)
 
-X = np.array(df.drop([forecast_col], 1))
-y = np.array(df[forecast_col])
+X = np.array(df.drop(['label'], 1))
+y = np.array(df['label'])
 
 X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size=0.2)
 
