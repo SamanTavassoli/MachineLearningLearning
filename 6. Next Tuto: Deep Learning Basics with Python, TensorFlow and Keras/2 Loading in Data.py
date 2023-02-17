@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 import cv2
 
-DATADIR = '../assets/Cats and Dogs data/PetImages'
+DATADIR = os.getcwd() + '/assets/Cats and Dogs data/PetImages'
 CATEGORIES = ['Dog', 'Cat']
 IMG_SIZE = 50
 
